@@ -10,11 +10,12 @@ async function start(client) {
   client.onMessage(async (msg) => {
     // console.log(msg);
     if (msg.body === "!cek") {
-      client.sendText(msg.from, "👋 Hello! BOT AKTIF");
+      client.sendText(msg.from, "👋 Hello! BOT STIKER SEDANG AKTIF");
       client;
-	if (msg.body === "!stiker") {
+    if (msg.body === "!stiker") {
       client.sendText(msg.from, "Bantu saya untuk mengembangkan BOT ini dengan share");
       client;
+    }
     } else if (msg.mimetype) {
       if (msg.caption === "!stiker" && msg.type === "image") {
         const mediaData = await decryptMedia(msg);
